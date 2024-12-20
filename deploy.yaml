@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment
+  name: my-app
   labels:
-    app: my-deployment
+    app: my-app
 spec:
   replicas: 2
   selector:
@@ -12,10 +12,10 @@ spec:
   template:
     metadata:
       labels:
-        app: my-deployment
+        app: my-app
     spec:
       containers:
-      - name: my-deployment
+      - name: my-app
         image: shisuis/project2
         ports:
         - containerPort: 80
